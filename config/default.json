@@ -1,0 +1,34 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "public": "../public/",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb://chief:chiefadmin@ds111535.mlab.com:11535/electricaldb",
+  "authentication": {
+    "secret": "cddaeb5d000b261892384268b68301f91de8248071c9e0e98d6f0421c14aee700c231d40f2aeb021b8b6c9f12e45b20ab25a59d7cc72aca3ab42eba202c9bf64d9ca1afb4fa08579ee6467e132f0bc90f0c5a0a832bdaf8fb345ba38bd139d0392f44d3ed41c404d1c392334172cb5f08666349fa4b55089931b3aac84812546aa57a1fec158b470bc85f98bc84b791325de9247249de9b587580cf40bf0fc8fea2855badbbcbdb76a2008fa07daf30b2737e938c90e80a9b8e7f4057481e5713299ad02ad137cf23bc12e34c6d03969e8ecffa863dbd79c13e0c364ff289c0484dc21ab73eccfafb09f566234452018e5aa2f86957e6cf582556b2e010e33e2",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
+}
