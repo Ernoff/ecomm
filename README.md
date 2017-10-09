@@ -1,6 +1,5 @@
-# ecomm 
+# ecomm  [![Build Status](https://travis-ci.org/Ernoff/ecomm.svg?branch=master)](https://travis-ci.org/Ernoff/ecomm) 
 
-[![Build Status](https://travis-ci.org/Ernoff/ecomm.svg?branch=master)](https://travis-ci.org/Ernoff/ecomm)
 
 > A modern, light microservice for ecommerce applications 
 
