@@ -4,8 +4,7 @@
 // for more of what you can do here.
 module.exports = function(app) {
     const mongooseClient = app.get('mongooseClient');
-    const { Schema } = mongooseClient;
-    const products = new Schema({
+    const products = new mongooseClient.Schema({
         name: { type: String, required: true },
         price: { type: Number, required: true },
         createdAt: { type: Date, default: Date.now },
