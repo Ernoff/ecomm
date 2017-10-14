@@ -23,6 +23,13 @@ module.exports = function () {
       remove: [
         authentication.hooks.authenticate('jwt')
       ]
+    },
+    after: {
+      all:[
+        hook => {
+          hook.result.user = hook.params.payload.userId
+        }
+      ]
     }
   });
 };
