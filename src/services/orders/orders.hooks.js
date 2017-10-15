@@ -1,8 +1,18 @@
+const populate = require('feathers-populate-hook');
 
 
+const orderSchema = {
+  products: {
+    service: 'products',
+    f_key: '_id',
+    query: {
+      $select: ['name','price']
+    }
+  }
+}
 module.exports = {
   before: {
-    all: [],
+    all: [populate.compatibility()],
     find: [],
     get: [],
     create: [],
@@ -13,7 +23,7 @@ module.exports = {
 
   after: {
     all: [],
-    find: [],
+    find: [populate(orderSchema)],
     get: [],
     create: [],
     update: [],
